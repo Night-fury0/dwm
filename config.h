@@ -3,8 +3,8 @@
 #include <X11/XF86keysym.h>
 
 /* for amixer */
-static const char *upvol[]      = { "/usr/bin/amixer",  "set", "Master", "5%+", NULL };
-static const char *downvol[]    = { "/usr/bin/amixer",  "set", "Master", "5%-", NULL };
+static const char *upvol[]      = { "/usr/bin/amixer",  "set", "Master", "10%+", NULL };
+static const char *downvol[]    = { "/usr/bin/amixer",  "set", "Master", "10%-", NULL };
 static const char *mutevol[]    = { "/usr/bin/amixerl", "set", "Master", "toggle", NULL };
 
 
@@ -27,7 +27,7 @@ static const unsigned int baralpha = 180;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_black, col_gray4 },
+	[SchemeNorm] = { col_gray3, col_black, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_black,  col_white  },
 };
 static const unsigned int alphas[][3]      = {

@@ -3,8 +3,8 @@
 #include <X11/XF86keysym.h>
 
 /* for amixer */
-static const char *upvol[]      = { "/usr/bin/amixer",  "set", "Master", "5%+", NULL };
-static const char *downvol[]    = { "/usr/bin/amixer",  "set", "Master", "5%-", NULL };
+static const char *upvol[]      = { "/usr/bin/amixer",  "set", "Master", "10%+", NULL };
+static const char *downvol[]    = { "/usr/bin/amixer",  "set", "Master", "10%-", NULL };
 static const char *mutevol[]    = { "/usr/bin/amixerl", "set", "Master", "toggle", NULL };
 
 
