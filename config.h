@@ -27,8 +27,8 @@ static const unsigned int baralpha = 180;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_black, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_gray1,  col_white  },
+	[SchemeNorm] = { col_gray3, col_black, col_gray4 },
+	[SchemeSel]  = { col_gray4, col_black,  col_white  },
 };
 static const unsigned int alphas[][3]      = {
     /*               fg      bg        border*/
