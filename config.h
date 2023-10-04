@@ -77,6 +77,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *screenshotcmd[]  = {"screenshot",NULL};
+static const char *screenrecordcmd[]  = {"screenrecord",NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -106,8 +108,8 @@ static const Key keys[] = {
     { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
     { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
     { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
-    { 0,                            XK_Print,  spawn,        SHCMD("~/Screenshots/screenshot.sh") },
-    { ShiftMask,                    XK_Print,  spawn,        SHCMD("~/screenrecord.sh") },
+    { 0,                            XK_Print,  spawn,          {.v = screenshotcmd } },
+    { ShiftMask,                    XK_Print,  spawn,          {.v = screenrecordcmd } },
 	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
 	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
 	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
